@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'A': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'B': [10, 20, 15, 25, 30, 35, 28, 40, 45, 50],
+    'C': [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+    'D': [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+    'E': [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+}
+
+df = pd.DataFrame(data)
+
+plt.figure(figsize=(8, 6))
+plt.scatter(df['A'], df['B'], color='blue', label='A vs B')
+
+plt.xlabel('A')
+plt.ylabel('B')
+plt.title('Scatter Plot of A vs B')
+plt.legend()
+plt.grid(True)
+
+plt.show()
